@@ -1,0 +1,12 @@
+##You can query all columns per table in specific database using this query##
+select
+    TABLE_SCHEMA,
+    TABLE_NAME,
+    COLUMN_NAME
+from
+    information_schema.columns
+where
+    table_schema = 'database_name'
+order by 
+    table_name,
+    ordinal_position;
